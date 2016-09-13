@@ -1,0 +1,30 @@
+[{
+    "name":"Shailendra Singh",
+    "dob":"20/1/1985",
+    "gender":"male",
+    "salary":"100000"
+},
+{
+    "name":"Neha Mishra",
+    "dob":"20/08/1991",
+    "gender":"female",
+    "salary":"50000"
+},
+{
+    "name":"Ajeet Singh",
+    "dob":"10/02/1988",
+    "gender":"male",
+    "salary":"90000"
+},
+{
+    "name":"Navneet Singh",
+    "dob":"10/07/1987",
+    "gender":"male",
+    "salary":"80000"
+},
+{
+    "name":"Shrada Yadav",
+    "dob":"20/10/1986",
+    "gender":"female",
+    "salary":"10000"
+}]

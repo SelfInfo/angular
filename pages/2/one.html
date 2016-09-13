@@ -1,0 +1,37 @@
+    <section> 
+        <article >
+            <table class="container">
+               
+                <tr>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name  </a>
+                        <span class="down" ng-show="sortType == 'name' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'name' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'dob'; sortReverse = !sortReverse">Date of Birth</a> 
+                         <span class="down" ng-show="sortType == 'dob' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'dob' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'gender'; sortReverse = !sortReverse">Gender </a>
+                        <span class="down" ng-show="sortType == 'gender' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'gender' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'salary'; sortReverse = !sortReverse">Salary</a> 
+                        <span class="down" ng-show="sortType == 'salary' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'salary' && sortReverse" >&#8593;</span>
+                   </td>
+                    <th> Salary Currency</th>
+                </tr>
+                 <tr  ng-repeat="emp in data |  orderBy:sortType:sortReverse">
+                    <td class="td">{{emp.name}} </td>
+                    <td class="td">{{emp.dob|date: "d/M/y"}} </td>
+                    <td class="td">{{emp.gender}} </td>
+                    <td class="td">{{emp.salary|number:2}} </td>
+                    <td class="td">{{emp.salary|currency:"Rs" }}</td>
+                </tr>
+            </table>
+        </article>
+    </section>

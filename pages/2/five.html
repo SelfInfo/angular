@@ -1,0 +1,36 @@
+    <section> 
+        <article >
+            <table class="container">
+                <tr><td><input type="checkbox" ng-true-value="true" ng-false-value="false"  ng-model="showSalary" >Salary</td></tr>
+                <tr>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name  </a>
+                        <span class="down" ng-show="sortType == 'name' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'name' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'dob'; sortReverse = !sortReverse">Date of Birth</a> 
+                         <span class="down" ng-show="sortType == 'dob' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'dob' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th>
+                        <a  href="javascript:void(0)" ng-click="sortType = 'gender'; sortReverse = !sortReverse">Gender </a>
+                        <span class="down" ng-show="sortType == 'gender' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'gender' && sortReverse" >&#8593;</span>
+                        </td>
+                    <th  ng-show="showSalary">
+                        <a  href="javascript:void(0)" ng-click="sortType = 'salary'; sortReverse = !sortReverse">Salary</a> 
+                        <span class="down" ng-show="sortType == 'salary' && !sortReverse" >&#8595;</span>
+                        <span class="up" ng-show="sortType == 'salary' && sortReverse" >&#8593;</span>
+                   </td>
+                    
+                </tr>
+                 <tr  ng-repeat="emp in data |  orderBy:sortType:sortReverse | searchemp:searchtext | filter:search ">
+                    <td class="td">{{emp.name}} </td>
+                    <td class="td">"{{emp.dob|date:'yyyy-MM-dd HH:mm:ss Z'}}" </td>
+                    <td class="td">{{emp.gender}} </td>
+                    <td class="td" ng-show="showSalary">{{emp.salary|number:2}} </td>
+                </tr>
+            </table>
+        </article>
+    </section>

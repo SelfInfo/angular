@@ -1,0 +1,39 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+.container{
+    position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    min-height: 10em;
+    width: 90%;
+     border: 1px solid;
+}
+
+
+th {
+    text-align: left;
+}
+
+ul {
+    list-style: outside none none;
+    margin-left: 15px; 
+}
+li {
+    display: inline;
+    padding: 4px;
+}
